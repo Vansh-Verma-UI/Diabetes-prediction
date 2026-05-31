@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🩺 Diabetes Prediction</h2>
+        <form method="POST" action="/predict">
+            <label>Gender</label>
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <label>Age</label>
+            <input type="number" name="age" min="1" max="120">
+
+            <label>Hypertension</label>
+            <select name="hypertension">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Heart Disease</label>
+            <select name="heart_disease">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label>Smoking History</label>
+            <select name="smoking_history">
+                <option>never</option>
+                <option>current</option>
+                <option>former</option>
+                <option>ever</option>
+                <option>not current</option>
+            </select>
+
+            <label>BMI</label>
+            <input type="number" step="0.1" name="bmi">
+
+            <label>HbA1c Level</label>
+            <input type="number" step="0.1" name="hba1c">
+
+            <label>Blood Glucose Level</label>
+            <input type="number" name="blood_glucose">
+
+            <button type="submit">Predict</button>
+        </form>
+        <div class="result">
+            <!-- Prediction result will appear here -->
+        </div>
+    </div>
+</body>
+</html>
