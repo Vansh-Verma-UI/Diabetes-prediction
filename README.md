@@ -17,5 +17,12 @@ Diabetes Prediction Dataset
 - Diabetes prediction
 - Machine learning based analysis
 
+ # Future Improvements
+- Support for larger datasets
+- Integration with real‑time patient data
+- Improved UI with charts and visualizations
+
 ## Author
 Vansh Verma
+vanshverma3398@gmail.com
+ LinkedIn (linkedin.com in Bing)
